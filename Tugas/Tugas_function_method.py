@@ -1,10 +1,20 @@
 import time
+import os
 
 class Kontak :
    def __init__(self, input_name, input_telephone, date_add) :
       self.name = input_name
       self.telephone = input_telephone
       self.date = date_add
+      
+   def reading() :
+      os.system("cls")
+      print("DAFTAR KONTAK\n")
+      for index, data in enumerate(daftar_kontak) :
+         nama = data.__dict__["name"]
+         nomor = data.__dict__["telephone"]
+         
+         print(f"{index+1:4} | {nama:<30} | {nomor:14}")
    
    def adding() :
       nama = input("Masukan nama  : ")
